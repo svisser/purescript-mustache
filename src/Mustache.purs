@@ -16,3 +16,5 @@ foreign import tags :: Array String
 foreign import parse :: MustacheTemplate -> Array MustacheTag -> Array (Array String)
 
 foreign import render :: MustacheTemplate -> StrMap String -> StrMap String
+
+foreign import escape :: String -> String
