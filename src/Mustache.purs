@@ -11,7 +11,7 @@ foreign import name :: String
 
 foreign import version :: String
 
-foreign import tags :: Array String
+foreign import tags :: Array Tag
 
 foreign import parse :: Template -> Array Tag -> Array (Array String)
 
