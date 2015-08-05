@@ -14,3 +14,11 @@ exports.parse = function(template) {
         return Mustache.parse(template, tags);
     };
 };
+
+exports.render = function(template) {
+    return function(view) {
+        return function(partials) {
+            return Mustache.render(template, view, partials);
+        };
+    };
+};
