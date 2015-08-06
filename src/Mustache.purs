@@ -23,7 +23,7 @@ instance showTokenElement :: Show TokenElement where
 
 -- | Effect that represents side effects within mustache.js.
 -- |
--- | This is used to indicate writes that take place to mustache.js's cache.
+-- | This is used to indicate interactions with the cache in mustache.js.
 foreign import data MustacheEffect :: !
 
 -- | Name of the mustache.js dependency.
