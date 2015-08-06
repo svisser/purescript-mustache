@@ -36,3 +36,7 @@ exports.clearCache = function() {
         return Mustache.clearCache();
     };
 };
+
+exports.showTokenElementImpl = function(e) {
+    return e;
+}

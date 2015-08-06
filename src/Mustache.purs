@@ -12,6 +12,15 @@ type View = StrMap String
 
 type Partials = StrMap String
 
+type Token = Array TokenElement
+
+foreign import data TokenElement :: *
+
+foreign import showTokenElementImpl :: TokenElement -> String
+
+instance showTokenElement :: Show TokenElement where
+  show = showTokenElementImpl
+
 foreign import data MustacheEffect :: !
 
 foreign import name :: String
@@ -20,7 +29,7 @@ foreign import version :: String
 
 foreign import tags :: Array Tag
 
-foreign import parse :: forall e. Template -> Array Tag -> Eff (mustache :: MustacheEffect | e) (Array (Array String))
+foreign import parse :: forall e. Template -> Array Tag -> Eff (mustache :: MustacheEffect | e) (Array Token)
 
 foreign import render :: forall e. Template -> View -> Partials -> Eff (mustache :: MustacheEffect | e) String
 
