@@ -26,3 +26,7 @@ exports.render = function(template) {
 exports.escape = function(s) {
     return Mustache.escape(s);
 }
+
+exports.clearCache = function() {
+    return Mustache.clearCache();
+}
