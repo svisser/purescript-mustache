@@ -16,8 +16,11 @@ import qualified Data.Tuple as T
 
 import Mustache
 
+item1 = (T.Tuple "name" "John")
+item2 = (T.Tuple "value" "10000")
+
 view :: L.List (T.Tuple String String)
-view = L.Cons (T.Tuple "name" "John") (L.Cons (T.Tuple "value" "10000") L.Nil)
+view = L.Cons item1 (L.Cons item2 L.Nil)
 
 s = "Hello {{name}}! You have just won ${{value}}!"
 
