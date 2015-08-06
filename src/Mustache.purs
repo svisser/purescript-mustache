@@ -35,7 +35,7 @@ foreign import version :: String
 -- | Default mustache.js tags (default: array with "{{" and "}}").
 foreign import tags :: Array Tag
 
--- | Precompile a template and store parsed token in mustache.js's cache.
+-- | Precompile a template and write parsed tokens to a cache within mustache.js.
 foreign import parse :: forall e. Template -> Array Tag -> Eff (mustache :: MustacheEffect | e) (Array Token)
 
 -- | Render the template with the given view and partial templates.
