@@ -63,7 +63,7 @@ This is used to indicate interactions with the cache in mustache.js.
 name :: String
 ```
 
-Name of the mustache.js dependency.
+Name of the mustache.js dependency (`"mustache.js"`).
 
 #### `version`
 
@@ -79,7 +79,7 @@ Version string as specified in mustache.js.
 tags :: Array Tag
 ```
 
-Default mustache.js tags (default: array with "{{" and "}}").
+Default mustache.js tags (default: array with `"{{"` and `"}}"`).
 
 #### `parse`
 

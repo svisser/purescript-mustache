@@ -26,13 +26,13 @@ instance showTokenElement :: Show TokenElement where
 -- | This is used to indicate interactions with the cache in mustache.js.
 foreign import data MustacheEffect :: !
 
--- | Name of the mustache.js dependency.
+-- | Name of the mustache.js dependency (`"mustache.js"`).
 foreign import name :: String
 
 -- | Version string as specified in mustache.js.
 foreign import version :: String
 
--- | Default mustache.js tags (default: array with "{{" and "}}").
+-- | Default mustache.js tags (default: array with `"{{"` and `"}}"`).
 foreign import tags :: Array Tag
 
 -- | Precompile a template and write parsed tokens to a cache within mustache.js.
