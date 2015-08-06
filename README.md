@@ -28,3 +28,7 @@ main = do
   result <- render s (S.fromList view) S.empty
   log result
 ```
+
+## Module documentation
+
+- [Mustache](docs/Mustache.md)
