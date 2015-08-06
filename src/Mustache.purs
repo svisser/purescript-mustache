@@ -20,9 +20,9 @@ foreign import version :: String
 
 foreign import tags :: Array Tag
 
-foreign import parse :: Template -> Array Tag -> Array (Array String)
+foreign import parse :: forall e. Template -> Array Tag -> Eff (mustache :: MustacheEffect | e) (Array (Array String))
 
-foreign import render :: Template -> View -> Partials -> String
+foreign import render :: forall e. Template -> View -> Partials -> Eff (mustache :: MustacheEffect | e) String
 
 foreign import escape :: String -> String
 
