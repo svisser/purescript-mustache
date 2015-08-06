@@ -11,7 +11,6 @@ import Prelude
 import Control.Monad.Eff.Console (log)
 
 import qualified Data.StrMap as S
-import qualified Data.Tuple as T
 
 import Mustache
 
