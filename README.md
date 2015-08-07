@@ -1,6 +1,10 @@
 # purescript-mustache
 PureScript wrapper for mustache.js
 
+## Installation
+
+    bower install purescript-mustache
+
 ## Example
 
 ``` purescript
