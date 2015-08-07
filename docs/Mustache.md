@@ -41,12 +41,6 @@ data TokenElement :: *
 instance showTokenElement :: Show TokenElement
 ```
 
-#### `showTokenElementImpl`
-
-``` purescript
-showTokenElementImpl :: TokenElement -> String
-```
-
 #### `MustacheEffect`
 
 ``` purescript

@@ -1,4 +1,19 @@
-module Mustache where
+module Mustache
+  ( Template()
+  , Tag()
+  , View()
+  , Partials()
+  , Token()
+  , TokenElement()
+  , MustacheEffect()
+  , name
+  , version
+  , tags
+  , parse
+  , render
+  , escape
+  , clearCache
+  ) where
 
 import Control.Monad.Eff (Eff())
 import Data.StrMap (StrMap())
