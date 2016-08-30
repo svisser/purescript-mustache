@@ -3,16 +3,16 @@
 
 // module Mustache
 
-exports.name = Mustache.name;
+exports.name = require("mustache").name;
 
-exports.version = Mustache.version;
+exports.version = require("mustache").version;
 
-exports.tags = Mustache.tags;
+exports.tags = require("mustache").tags;
 
 exports.parse = function(template) {
     return function(tags) {
         return function() {
-            return Mustache.parse(template, tags);
+            return require("mustache").parse(template, tags);
         };
     };
 };
@@ -21,19 +21,19 @@ exports.render = function(template) {
     return function(view) {
         return function(partials) {
             return function() {
-                return Mustache.render(template, view, partials);
+                return require("mustache").render(template, view, partials);
             };
         };
     };
 };
 
 exports.escape = function(s) {
-    return Mustache.escape(s);
+    return require("mustache").escape(s);
 }
 
 exports.clearCache = function() {
     return function() {
-        return Mustache.clearCache();
+        return require("mustache").clearCache();
     };
 };
 
