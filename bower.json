@@ -21,6 +21,7 @@
     "mustache": "^2.2.1"
   },
   "devDependencies": {
-    "purescript-psci-support": "^1.0.0"
+    "purescript-psci-support": "^1.0.0",
+    "purescript-quickcheck": "^1.0.0"
   }
 }
