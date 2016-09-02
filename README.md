@@ -5,6 +5,14 @@ PureScript wrapper for mustache.js
 
     bower install purescript-mustache
 
+## Building
+
+```
+bower install
+pulp build
+pulp test
+```
+
 ## Example
 
 ``` purescript

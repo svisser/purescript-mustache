@@ -1,8 +1,8 @@
 module Mustache
   ( Template()
   , Tag()
-  , View()
-  , Partials()
+  , View(..)
+  , Partials(..)
   , Token()
   , TokenElement()
   , MustacheEffect()
@@ -16,16 +16,15 @@ module Mustache
   ) where
 
 import Control.Monad.Eff (Eff())
-import Data.StrMap (StrMap())
-import Prelude (Show, Unit())
+import Prelude (class Show, Unit())
 
 type Template = String
 
 type Tag = String
 
-type View = StrMap String
+type View r = Record (|r)
 
-type Partials = StrMap String
+type Partials r = Record (|r)
 
 type Token = Array TokenElement
 
@@ -54,7 +53,7 @@ foreign import tags :: Array Tag
 foreign import parse :: forall e. Template -> Array Tag -> Eff (mustache :: MustacheEffect | e) (Array Token)
 
 -- | Render the template with the given view and partial templates.
-foreign import render :: forall e. Template -> View -> Partials -> Eff (mustache :: MustacheEffect | e) String
+foreign import render :: forall  r s e. Template -> View r -> Partials s -> Eff (mustache :: MustacheEffect | e) String
 
 -- | Escape various characters as HTML entities in the given string.
 foreign import escape :: String -> String
