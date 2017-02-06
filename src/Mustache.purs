@@ -17,7 +17,8 @@ module Mustache
 
 import Control.Monad.Eff (Eff())
 import Data.StrMap (StrMap())
-import Prelude (Show, Unit())
+import Data.Show
+import Prelude (Unit())
 
 type Template = String
 

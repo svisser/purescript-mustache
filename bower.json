@@ -1,6 +1,6 @@
 {
   "name": "purescript-mustache",
-  "version": "0.1.0",
+  "version": "2.0.0",
   "moduleType": [
     "node"
   ],
@@ -15,8 +15,8 @@
     "url": "git://github.com/svisser/purescript-mustache.git"
   },
   "dependencies": {
-    "purescript-console": "^0.1.0",
-    "purescript-maps": "^0.4.2",
+    "purescript-console": "^2.0.0",
+    "purescript-maps": "^2.1.1",
     "mustache": "^2.1.3"
   }
 }
