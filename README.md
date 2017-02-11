@@ -5,7 +5,20 @@ PureScript wrapper for mustache.js
 
     bower install purescript-mustache
 
+## How to use
+
+Add the following to `"dependencies"` in `bower.json`:
+
+    "purescript-mustache": "^2.1.0"
+
+Run the following;
+
+    bower update
+    pulp build
+
 ## Example
+
+Add the following to `Main.purs`:
 
 ``` purescript
 module Main where
@@ -30,6 +43,10 @@ main = do
   result <- render s view S.empty
   log result
 ```
+
+Run it using:
+
+    pulp run
 
 ## Module documentation
 
