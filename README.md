@@ -10,19 +10,22 @@ PureScript wrapper for mustache.js
 ``` purescript
 module Main where
 
-import Prelude
+import Prelude (Unit, bind)
 
-import Control.Monad.Eff.Console (log)
+import Control.Monad.Eff (Eff)
+import Control.Monad.Eff.Console (CONSOLE, log)
 
-import qualified Data.StrMap as S
+import Data.StrMap as S
 
-import Mustache
+import Mustache (MustacheEffect, render)
 
 view :: S.StrMap String
 view = S.insert "name" "John" (S.insert "value" "10000" S.empty)
 
+s :: String
 s = "Hello {{name}}! You have just won ${{value}}!"
 
+main :: forall e. Eff (mustache :: MustacheEffect, console :: CONSOLE | e) Unit
 main = do
   result <- render s view S.empty
   log result
