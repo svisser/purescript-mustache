@@ -21,7 +21,6 @@ exports.render = function(template) {
     return function(view) {
         return function(partials) {
             return function() {
-              console.log('a');
                 return require("mustache").render(template, view, partials);
             };
         };
