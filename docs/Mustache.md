@@ -33,18 +33,18 @@ type Token = Array TokenElement
 #### `TokenElement`
 
 ``` purescript
-data TokenElement :: *
+data TokenElement :: Type
 ```
 
 ##### Instances
 ``` purescript
-instance showTokenElement :: Show TokenElement
+Show TokenElement
 ```
 
 #### `MustacheEffect`
 
 ``` purescript
-data MustacheEffect :: !
+data MustacheEffect :: Effect
 ```
 
 Effect that represents side effects within mustache.js.

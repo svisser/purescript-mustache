@@ -3,18 +3,12 @@ PureScript wrapper for mustache.js
 
 ## Installation
 
-    bower install purescript-mustache
+    bower install --save purescript-mustache
+    npm install mustache
+    
+## Compiling
 
-## How to use
-
-Add the following to `"dependencies"` in `bower.json`:
-
-    "purescript-mustache": "^2.1.0"
-
-Run the following;
-
-    bower update
-    pulp build
+If you're use purescript-mustache on the front-end, you will need to compile using `pulp browserify`. Otherwise, compiling with `pulp build` should work.
 
 ## Example
 

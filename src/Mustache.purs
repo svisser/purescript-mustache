@@ -15,10 +15,11 @@ module Mustache
   , clearCache
   ) where
 
-import Control.Monad.Eff (Eff())
-import Data.StrMap (StrMap())
 import Data.Show
-import Prelude (Unit())
+
+import Control.Monad.Eff (Eff, kind Effect)
+import Data.StrMap (StrMap)
+import Prelude (Unit)
 
 type Template = String
 
@@ -30,7 +31,7 @@ type Partials = StrMap String
 
 type Token = Array TokenElement
 
-foreign import data TokenElement :: *
+foreign import data TokenElement :: Type
 
 foreign import showTokenElementImpl :: TokenElement -> String
 
@@ -40,7 +41,7 @@ instance showTokenElement :: Show TokenElement where
 -- | Effect that represents side effects within mustache.js.
 -- |
 -- | This is used to indicate interactions with the cache in mustache.js.
-foreign import data MustacheEffect :: !
+foreign import data MustacheEffect :: Effect
 
 -- | Name of the mustache.js dependency (`"mustache.js"`).
 foreign import name :: String

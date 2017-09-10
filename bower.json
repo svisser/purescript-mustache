@@ -15,8 +15,8 @@
     "url": "git://github.com/svisser/purescript-mustache.git"
   },
   "dependencies": {
-    "purescript-console": "^2.0.0",
-    "purescript-maps": "^2.1.1",
-    "mustache": "^2.1.3"
+    "purescript-console": "^3.0.0",
+    "purescript-maps": "^3.5.1",
+    "mustache": "^2.3.0"
   }
 }
