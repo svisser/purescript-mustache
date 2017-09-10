@@ -44,4 +44,4 @@ Run it using:
 
 ## Module documentation
 
-- [Mustache](docs/Mustache.md)
+Module documentation is [published on Pursuit](https://pursuit.purescript.org/packages/purescript-mustache).
